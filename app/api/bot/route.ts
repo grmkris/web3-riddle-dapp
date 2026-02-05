@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 import { contractAbi } from "@/lib/contract_abi";
 import { createPublicClient, http, createWalletClient, keccak256, toHex } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
