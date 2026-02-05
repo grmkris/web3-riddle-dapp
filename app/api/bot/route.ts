@@ -33,12 +33,12 @@ export async function POST() {
   const account = privateKeyToAccount(privateKey);
   const publicClient = createPublicClient({
     chain: sepolia,
-    transport: http(),
+    transport: http(process.env.RPC_URL),
   });
   const walletClient = createWalletClient({
     account,
     chain: sepolia,
-    transport: http(),
+    transport: http(process.env.RPC_URL),
   });
 
   const isActive = await publicClient.readContract({
